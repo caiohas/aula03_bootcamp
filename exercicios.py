@@ -53,7 +53,7 @@ elif "@" not in email or "." not in email:
 else:
     print("Dados de usuário válidos")
 
-#Exercício 5: Detecção de Anomalias em Dados de Transações
+# Exercício 5: Detecção de Anomalias em Dados de Transações
 ## Você está trabalhando em um sistema de detecção de fraude e precisa identificar transações suspeitas. 
 ## Uma transação é considerada suspeita se o valor for superior a R$ 10.000 ou se ocorrer fora do horário comercial 
 ## (antes das 9h ou depois das 18h). Dada uma transação como transacao = {'valor': 12000, 'hora': 20}, verifique se ela é suspeita.
@@ -64,3 +64,23 @@ if transacao['valor'] > 10000 or transacao['hora'] < 9 or transacao['hora'] > 18
     print("Transação suspeita")
 else:
     print("Transação normal")
+
+# Exercício 6. Contagem de Palavras em Textos
+## Objetivo: Dado um texto, contar quantas vezes cada palavra única aparece nele.
+
+texto = "Nós somos do Clube Atlético Mineiro (esse é um trecho do hino do Clube Atlético Mineiro)"
+novo_texto = texto.replace("(", "")
+novo_texto = novo_texto.replace(")", "")
+palavras = novo_texto.split(" ")
+print(palavras)
+
+contagem_palavras = {}
+
+for palavra in palavras:
+    if palavra in contagem_palavras:
+        contagem_palavras[palavra] += 1 
+    else:
+        contagem_palavras[palavra] = 1
+
+print(contagem_palavras)
+

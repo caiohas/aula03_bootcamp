@@ -1,11 +1,7 @@
-x = int(input("Please enter an integer: "))
+import time
 
-if x < 0:
-    x = 0
-    print('Negative changed to zero')
-elif x == 0:
-    print('Zero')
-elif x == 1:
-    print('Single')
-else:
-    print('More')
+condicao = True
+
+while condicao:
+    print("Execute minha ETL")
+    time.sleep(86400)
